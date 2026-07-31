@@ -1,0 +1,87 @@
+{
+    "folder": "20260730_183502_001293_twitch_skipnho",
+    "platform": "twitch",
+    "recordings_dir": "/var/www/html/storage/app/private/recordings/20260730_183502_001293_twitch_skipnho",
+    "processing_dir": "/var/www/html/storage/app/private/processing/20260730_183502_001293_twitch_skipnho",
+    "segment_seconds": 10,
+    "started_at": "2026-07-30T18:34:37-03:00",
+    "ended_at": "2026-07-31T08:27:32-03:00",
+    "generated_at": "2026-07-31T11:32:50+00:00",
+    "resume_safe": true,
+    "contract": {
+        "inputs": {
+            "folder": "20260730_183502_001293_twitch_skipnho",
+            "snapshot": {
+                "folder": "20260730_183502_001293_twitch_skipnho",
+                "live_ended_at": "2026-07-31T08:27:32-03:00",
+                "video_output_id": 68,
+                "video_ready_for_processing_at": "2026-07-31T08:32:34-03:00",
+                "chat_output_id": 69,
+                "chat_ready_for_processing_at": "2026-07-31T08:32:34-03:00"
+            },
+            "video_output": {
+                "id": 68,
+                "output_type": "video_source",
+                "status": "ready_for_processing",
+                "format": "ts",
+                "totals": {
+                    "size_bytes": 34032336904,
+                    "duration_seconds": 32263.999667
+                },
+                "summary": {
+                    "descriptors_count": 1,
+                    "valid_segments_count": 1,
+                    "invalid_segments_count": 0,
+                    "partial": false
+                },
+                "segments_count": 1
+            },
+            "chat_output": {
+                "id": 69,
+                "output_type": "chat_source",
+                "status": "ready_for_processing",
+                "format": "jsonl",
+                "totals": {
+                    "size_bytes": 8858719,
+                    "lines_total": 15255,
+                    "valid_lines_total": 15255
+                },
+                "summary": {
+                    "descriptors_count": 1,
+                    "valid_segments_count": 1,
+                    "invalid_segments_count": 0,
+                    "partial": false
+                },
+                "segments_count": 1
+            }
+        },
+        "outputs": {
+            "required_always": [
+                "manifests/video_inventory.json",
+                "source/{base_slug}/index.m3u8",
+                "source/master.m3u8",
+                "media/{base_slug}.mp4",
+                "manifests/processing_result.json"
+            ],
+            "required_when_chat_enabled": [
+                "chat/merged.jsonl"
+            ],
+            "required_when_assets_enabled": [
+                "assets/poster.jpg",
+                "assets/animated.webp",
+                "assets/thumbnails.vtt"
+            ],
+            "upload_contract": {
+                "source": "processing_result_manifest",
+                "channel_live_id": 167,
+                "channel_live_pipeline_run_id": 146,
+                "status": "ready",
+                "processing_result_path": "/var/www/html/storage/app/private/processing/20260730_183502_001293_twitch_skipnho/manifests/processing_result.json"
+            }
+        }
+    },
+    "outputs": {
+        "video_output_id": 68,
+        "chat_output_id": 69
+    }
+}
